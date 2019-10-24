@@ -3,17 +3,25 @@ import React, { Component } from 'react'
 export default class componentName extends Component {
 constructor(props){
   super(props)
-  state={
-    count:1
+  this.state={
+    count:1,
+    name: 'Edy'
   }
-  this.handleClick = this.handleClick.bind(this);
-}
+};
 
 
-    handleClick (){
-        console.log('you click me')
-        console.log(this.state.count)
-    }
+
+   addCount = () =>{
+this.setState({count: this.state.count + 1, name: 'John'})
+   };
+  lowerCount = () => {
+
+  };
+  resetCount = () => {
+
+  }
+
+
 
     render() {
         // console.log(this.props)
@@ -25,7 +33,11 @@ constructor(props){
             <div>
             <h3>Title: {title}</h3>
             <h5>Author: {author}</h5>
-            <button type="button" onClick={this.handleClick} >Add Count</button>
+            <h2>Count:{this.state.count}</h2>
+              <h2>Name:{this.state.name}</h2>
+            <button type="button" onClick={this.addCount}>Add Count</button>
+            <button type="button" onClick={this.resetCount}>Reset Count</button>
+            <button type="button" onClick={this.lowerCount} >Lower Count</button>
             </div>
 
             </article>
