@@ -18,7 +18,7 @@ this.setState({count: this.state.count + 1})
     this.setState({ count: this.state.count - 1 })
   };
   resetCount = () => {
-
+    this.setState({ count: 0 })
   }
 
 
