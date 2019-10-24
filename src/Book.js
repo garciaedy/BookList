@@ -12,10 +12,10 @@ constructor(props){
 
 
    addCount = () =>{
-this.setState({count: this.state.count + 1, name: 'John'})
+this.setState({count: this.state.count + 1})
    };
   lowerCount = () => {
-
+    this.setState({ count: this.state.count - 1 })
   };
   resetCount = () => {
 
